@@ -1,0 +1,14 @@
+#There was some users data copied on Nautilus App Server 2 at /home/usersdata location by the Nautilus production support team in Stratos DC.
+#Later they found that they mistakenly mixed up different user data there. Now they want to filter out some user data and copy it to another
+#location. Find the details below:
+
+#On App Server 2 find all files (not directories) owned by user kristy inside /home/usersdata directory and copy them all while keeping the 
+#folder structure (preserve the directories path) to /media directory.
+
+solution
+
+ssh steve@stapp02
+ls -ltr /home/usersdata
+find  /home/usersdata/ -type f -user kristy | wc -l      ---- to count the files owned by kristy
+find  /home/usersdata/ -type f -user kristy -exec cp --parent {} /media \;  ---- to find all the files owned by kristy and copy them all to 
+                                                                                /media directory while keeping the folder structure
