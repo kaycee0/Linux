@@ -1,0 +1,22 @@
+#The Nautilus security team performed an audit on all servers present in Stratos DC. During the audit some critical data/files were 
+#identified which were having the wrong permissions as per security standards. Once the report was shared with the production support team,
+#they started fixing the issues. It has been identified that one of the files named /etc/hosts on Nautilus App 1 server has wrong 
+#permissions, so that needs to be fixed and the correct ACLs needs to be set.
+
+
+#1. The user owner and group owner of the file should be root user.
+
+#2. Others must have read only permissions on the file.
+
+#3. User jim must not have any permission on the file.
+
+#4. User eric should have read only permission on the file.
+
+solution
+
+ssh tony@stapp01
+ls -l /etc/hosts  ----- to check the permissions of the file /etc/hosts
+sudo chown root:root /etc/hosts  --- to change the owner and group of the file /etc/hosts
+sudo chmod o+r /etc/hosts  ---- to give "others" read only permission
+sudo setfacl -m u:jim:000 /etc/hosts  ------ to remove all permissions from user jim on the file
+sudo setfacl -m u:eric:r /etc/hosts  ------ to give user eric read only permission on the file 
