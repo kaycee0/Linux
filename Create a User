@@ -7,6 +7,6 @@
 
 #solution
 
-ssh banner@stapp03
-sudo useradd -u 1189 -d/var/www/yousuf yousuf    -----  -u 1189 for UID
+ ssh banner@stapp03
+ sudo useradd -u 1189 -d/var/www/yousuf yousuf    -----  -u 1189 for UID
                                                          -d for directory 
