@@ -12,4 +12,4 @@ sudo groupadd nautilus_developers              ----- to create a group called na
 Sudo useradd Jarod                             ------ to create a user called Jarod
 Sudo usermod -a -G nautilus_developers Jarod   ------ to add a user Jarod to the group nautilus_developers
 
-Repeat the steps for the other 2 AppServers
+ Repeat the steps for the other 2 AppServers
