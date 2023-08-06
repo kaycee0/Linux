@@ -1,0 +1,15 @@
+#There are specific access levels for users defined by the xFusionCorp Industries system admin team. Rather than providing access levels to 
+#every individual user, the team has decided to create groups with required access levels and add users to that groups as needed. 
+#See the following requirements:
+
+#a. Create a group named nautilus_noc in all App servers in Stratos Datacenter.
+#b. Add the user Jarod to nautilus_developers group in all App servers. (create the user if doesn't exist).
+
+solution
+
+ssh tony@stapp01
+sudo groupadd nautilus_developers              ----- to create a group called nautilus_developers
+Sudo useradd Jarod                             ------ to create a user called Jarod
+Sudo usermod -a -G nautilus_developers Jarod   ------ to add a user Jarod to the group nautilus_developers
+
+Repeat the steps for the other 2 AppServers
