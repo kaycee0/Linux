@@ -5,5 +5,5 @@
 
 #solution
 
-ssh tony@stapp01
-sudo adduser rose -s /sbin/nologin    ----- to create a user rose with non interactive shell
+ ssh tony@stapp01
+ sudo adduser rose -s /sbin/nologin    ----- to create a user rose with non interactive shell
