@@ -5,7 +5,7 @@
 #a. Create a user named yousuf on the App server 3 in Stratos Datacenter.
 #b. Set its UID to 1189 and home directory to /var/www/yousuf.
 
-solution
+#solution
 
 ssh banner@stapp03
 sudo useradd -u 1189 -d/var/www/yousuf yousuf    -----  -u 1189 for UID
