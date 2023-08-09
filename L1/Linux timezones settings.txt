@@ -1,0 +1,10 @@
+#During the daily standup, it was pointed out that the timezone across Nautilus Application Servers in 
+#Stratos Datacenter doesn't match with that of the local datacenter's timezone, which is Pacific/Chatham.
+
+solution
+
+ssh tony@stapp01
+sudo timedatectl   ----- to view the time zone
+sudo timedatectl set-timezone Pacific/Chatham  ----- to set the time zonne to "Pacific/Chatham"
+
+#Repeat for othe 2 AppServers
